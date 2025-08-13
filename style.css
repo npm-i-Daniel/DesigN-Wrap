@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: url(https://img.freepik.com/free-photo/flat-lay-workstation-with-copy-space-laptop_23-2148430879.jpg?semt=ais_hybrid&w=740) no-repeat center/cover;
+    color: white;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: orange;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: orange;
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+.create-btn {
+    background: orange;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.create-btn:hover {
+    background: #e68a00;
+}
+
+/* NEWS BAR */
+.news-bar {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 60px;
+    font-size: 14px;
+}
+
+.news-tag {
+    background: orange;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/* HERO SECTION */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    /* background-color: gray; */
+    height: 84vh;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+}
+
+.highlight {
+    color: orange;
+}
+
+.dot {
+    color: orange;
+}
+
+.hero p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #ddd;
+}
+
+/* SEARCH BOX */
+.search-box {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-box select,
+.search-box input {
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.search-box select {
+    background: #eee;
+}
+
+.search-box input {
+    flex: 1;
+}
+
+.search-box button {
+    background: orange;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background: #e68a00;
+}
+
+@media (max-width: 992px) {
+    header {
+        padding: 15px 30px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    nav {
+        display: none;
+        /* hidden by default */
+        flex-direction: column;
+        gap: 15px;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 20px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+    }
+
+    nav.show {
+        display: flex;
+        /* visible when toggled */
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .create-btn {
+        display: none;
+        /* optional hide on mobile */
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .create-btn {
+        align-self: center;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .search-box {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .search-box select,
+    .search-box input,
+    .search-box button {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    nav {
+        display: none;
+        /* hidden by default */
+        flex-direction: column;
+        gap: 15px;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 20px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    nav.show {
+        display: flex;
+        /* visible when toggled */
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .create-btn {
+        display: none;
+        /* optional hide on mobile */
+    }
+
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    .news-bar {
+        font-size: 12px;
+        padding: 8px 20px;
+    }
+
+    .hero h1 {
+        font-size: 22px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    nav {
+        display: none;
+        /* hidden by default */
+        flex-direction: column;
+        gap: 15px;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 20px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+    }
+
+    nav.show {
+        display: flex;
+        /* visible when toggled */
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .create-btn {
+        display: none;
+        /* optional hide on mobile */
+    }
+
+}
